@@ -1,19 +1,24 @@
 import os
 import boto3
-from dotenv import load_dotenv
 import numpy as np
 import numba
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
-load_dotenv()
+# Load environment variables (only needed if running locally with a .env file)
+if not os.getenv("GITHUB_ACTIONS"):
+    from dotenv import load_dotenv
+    load_dotenv()
 
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_REGION = os.getenv("AWS_REGION")
 BUCKET_NAME = "computervisionairplaneandships"
 PREFIXES = ["airplanes/planesnet/planesnet", "Ships/shipsnet/shipsnet"]
+
+# Your existing code here
+
 
 def process_image_data_parallel_optimized(images_data):
     results = np.zeros(len(images_data), dtype=np.float64)
