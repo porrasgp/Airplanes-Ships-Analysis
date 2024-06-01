@@ -5,29 +5,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: iterative/setup-cml@v1
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+          
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          
       - name: Run Geltonas_MVP script
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python Geltonas_MVP.py
           
+          # Capture metrics and performance in report.md
           echo "## Model Metrics" > report.md
           cat metrics.txt >> report.md
           
           echo "\n## Model Performance" >> report.md
           echo "Model performance metrics are on the plot below." >> report.md
-
-          cml-send-comment report.md
           
-    
+      - name: Comment on Pull Request
+        uses: iterative/cml@v1
+        with:
+          markdown: report.md
+          replace: true
