@@ -27,5 +27,7 @@ jobs:
           
           echo "\n## Model Performance" >> report.md
           echo "Model performance metrics are on the plot below." >> report.md
+
+          cml-send-comment report.md
           
     
