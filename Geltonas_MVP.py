@@ -83,5 +83,5 @@ if __name__ == "__main__":
 
     # Write metrics to file
     with open('metrics.txt', 'w') as outfile:
-        outfile.write(F'\nClassifier accuracy: {accuracy * 100:.2f}%')
+        outfile.write(F'\nClassifier accuracy = {accuracy * 100:.2f}%')
     
