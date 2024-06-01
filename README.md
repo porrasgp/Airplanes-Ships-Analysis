@@ -12,14 +12,14 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
      - 📥 Installation and configuration of Jupyter Notebook.
      - 🔧 GitHub repository setup.
      - 🔗 Integration of Jupyter with GitHub.
-   - **Responsible:** Gio
+   - **Responsible:** Giovanni
    - **Deadline:** Week 1
 
 2. **⚙️ CI/CD Configuration**
    - **Activities:**
      - 🔄 Setup CI/CD workflows using GitHub Actions.
      - 🧪 Automated tests and deployment processes.
-   - **Responsible:** Gio
+   - **Responsible:** Giovanni
    - **Deadline:** Week 2
 
 ### 📦 Phase 2: Database Preparation and Connection (Weeks 3-4)
@@ -28,14 +28,14 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
    - **Activities:**
      - 🗂️ Setup S3 buckets to store training data and trained models.
      - 🔐 Establish access permissions and data management policies.
-   - **Responsible:** Gio
+   - **Responsible:** Giovanni
    - **Deadline:** Week 3
 
 4. **🔌 Jupyter Notebook Connection with S3**
    - **Activities:**
      - 🛠️ Configure Jupyter Notebook to read and write to S3.
      - 🧪 Data transfer tests between S3 and Jupyter.
-   - **Responsible:** Gio
+   - **Responsible:** Giovanni
    - **Deadline:** Week 4
 
 5. **📊 Dataframe for Ecological Label Parameters**
@@ -89,6 +89,6 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
 
 ### 🧑‍🤝‍🧑 Key Responsibilities
 - **🔒 Angel:** Cryptographic tests, assistance in image annotation.
-- **⚙️ Gio:** Database and CI/CD setup, tools integration.
+- **⚙️ Giovanni:** Database and CI/CD setup, tools integration.
 - **🧠 Sebastián:** Algorithm selection and implementation, training data preparation.
 - **📊 Fabian:** Ecological label parameters.
