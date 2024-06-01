@@ -1,4 +1,3 @@
-ithub/workflows/cml.yaml at e4fc602
 name: Geltona-MLpipeline
 on: [push]
 jobs:
