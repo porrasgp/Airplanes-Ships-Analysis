@@ -80,4 +80,8 @@ if __name__ == "__main__":
     # Calculate accuracy
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Classifier accuracy: {accuracy * 100:.2f}%")
+
+    # Write metrics to file
+with open('metrics.txt', 'w') as outfile:
+    outfile.write(F'\nClassifier accuracy: {accuracy * 100:.2f}%')
     

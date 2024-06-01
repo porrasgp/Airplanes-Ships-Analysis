@@ -20,3 +20,13 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
         run: |
           python Geltonas_MVP.py
+          
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
+          
+          echo "\n## Model Performance" >> report.md
+          echo "Model performance metrics are on the plot below." >> report.md
+          
+          cml-publish model_results.png --md >> report.md
+          
+          cml-send-comment report.md 
