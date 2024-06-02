@@ -18,7 +18,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTIONS: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python Geltonas_MVP.py
           
