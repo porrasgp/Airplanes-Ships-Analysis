@@ -33,7 +33,7 @@ jobs:
           echo "## Model Metrics" > report.md
           cat metrics.txt >> report.md
           
-          echo "Model Performance" >> report.md
+          echo "\n Model Performance" >> report.md
           echo "Model performance metrics are shown below." >> report.md
 
       - name: Post CML Comment
