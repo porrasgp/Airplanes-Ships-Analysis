@@ -18,15 +18,14 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ secrets.AWS_REGION }}
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python Geltonas_MVP.py
-                - name: Write CML report
-        
           
-        run: |
-          # Post reports as comments in GitHub PRs
-          cat results.txt >> report.md
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
+          
+          echo "\n## Model Performance" >> report.md
+          echo "Model performance metrics are on the plot below." >> report.md
+
           cml comment create report.md
-
-
