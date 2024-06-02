@@ -1,4 +1,4 @@
-name: Geltona-MLpipeline
+name: Geltona-MLpipeline2.0
 on: [push]
 jobs:
   run:
