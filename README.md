@@ -7,17 +7,17 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
 
 ### 🛠️ Phase 1: Initial Setup (Weeks 1-2)
 
-1. **🔧 Define Tools: Jupyter Notebook, GitHub**
+1. **🔧 Define Tools: Jupyter Notebook, GitHub** ✅
    - **Activities:**
-     - 📥 Installation and configuration of Jupyter Notebook.
+     - 📥 Installation and configuration of VScode✅.
      - 🔧 GitHub repository setup.
-     - 🔗 Integration of Jupyter with GitHub.
+     - 🔗 Integration of VScode with GitHub✅.
    - **Responsible:** Giovanni
    - **Deadline:** Week 1
 
 2. **⚙️ CI/CD Configuration**
    - **Activities:**
-     - 🔄 Setup CI/CD workflows using GitHub Actions.
+     - 🔄 Setup CI/CD workflows using GitHub Actions ✅..
      - 🧪 Automated tests and deployment processes.
    - **Responsible:** Giovanni
    - **Deadline:** Week 2
@@ -26,15 +26,15 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
 
 3. **💾 S3 Database Configuration for Training and Hosting**
    - **Activities:**
-     - 🗂️ Setup S3 buckets to store training data and trained models.
-     - 🔐 Establish access permissions and data management policies.
+     - 🗂️ Setup S3 buckets to store training data and trained models✅..
+     - 🔐 Establish access permissions and data management policies✅..
    - **Responsible:** Giovanni
    - **Deadline:** Week 3
 
 4. **🔌 Jupyter Notebook Connection with S3**
    - **Activities:**
-     - 🛠️ Configure Jupyter Notebook to read and write to S3.
-     - 🧪 Data transfer tests between S3 and Jupyter.
+     - 🛠️ Configure VSCode/Github to read and write to S3✅.
+     - 🧪 Data transfer tests between S3 and VS Code✅.
    - **Responsible:** Giovanni
    - **Deadline:** Week 4
 
@@ -89,6 +89,6 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
 
 ### 🧑‍🤝‍🧑 Key Responsibilities
 - **🔒 Angel:** Cryptographic tests, assistance in image annotation.
-- **⚙️ Giovanni:** Database and CI/CD setup, tools integration.
+- **⚙️ Giovanni:** Database and CI/CD setup, tools integration ✅.
 - **🧠 Sebastián:** Algorithm selection and implementation, training data preparation.
 - **📊 Fabian:** Ecological label parameters.
