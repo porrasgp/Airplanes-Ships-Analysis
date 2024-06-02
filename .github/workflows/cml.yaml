@@ -28,8 +28,5 @@ jobs:
           echo "\n## Model Performance" >> report.md
           echo "Model performance metrics are shown below." >> report.md
 
-      - name: Post CML Comment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
+          echo "![](./graph.png)" >> report.md
           cml comment create report.md
