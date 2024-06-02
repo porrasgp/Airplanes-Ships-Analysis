@@ -24,7 +24,7 @@ def process_image_data_parallel_optimized(images_data):
     results = np.zeros(len(images_data), dtype=np.float64)
     for i in numba.prange(len(images_data)):
         # Vectorize the loop
-        results[i] = np.sum(images_data[100]) #cambiar i por 100
+        results[i] = np.sum(images_data[i]) 
     return results
 
 if __name__ == "__main__":
