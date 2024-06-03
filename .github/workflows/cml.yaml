@@ -30,10 +30,10 @@ jobs:
         run: |
           python Geltonas_MVP.py
 
-          echo "## Model Metrics" > report.md
+          echo "## Cryptographic Proofs" > report.md
           cat metrics.txt >> report.md  
 
-      - name: Post CML Comment
+      - name: Post CML Comment 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB }}
         run: |
