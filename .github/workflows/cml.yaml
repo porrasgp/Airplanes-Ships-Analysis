@@ -31,9 +31,7 @@ jobs:
           python Geltonas_MVP.py
 
           echo "## Model Metrics" > report.md
-          cat metrics.txt >> report.md
-          
-          echo "Model performance metrics are shown below." >> report.md
+          cat metrics.txt >> report.md  
 
       - name: Post CML Comment
         env:
