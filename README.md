@@ -45,16 +45,16 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
    - **Responsible:** Fabian
    - **Deadline:** Week 2
 
-### 🧩 Phase 3: Algorithm Development and Cryptographic Proofs (Weeks 5-7)
+### 🧩 Phase 3: Algorithm Development and Cryptographic Proof (Weeks 5-7)
 
 6. **🧠 Machine Learning Algorithms**
    - **Activities:**
      - 📚 Research and selection of suitable ML algorithms.
-     - 💻 Implementation and testing of algorithms in Jupyter Notebook.
+     - 💻 Implementation and testing of algorithms in VS Code/Github.
    - **Responsible:** Sebastián
    - **Deadline:** Weeks 5-6
 
-7. **🔒 Point of Interest (POI) with Cryptographic Proof (Zero-Knowledge Proof)**
+7. **🔒 Cryptographic Proof (Zero-Knowledge Proof)**
    - **Activities:**
      - 🔑 Implementation of Zero-Knowledge Proof for data verification.
      - 🛡️ Ensure privacy and security of data during model training and deployment.
