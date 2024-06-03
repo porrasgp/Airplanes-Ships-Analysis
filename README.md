@@ -7,7 +7,7 @@ Develop a machine learning model using GitHub and S3 databases, ensuring efficie
 
 ### 🛠️ Phase 1: Initial Setup (Weeks 1-2)
 
-1. **🔧 Define Tools: Jupyter Notebook, GitHub** ✅
+1. **🔧 Define Tools: VS Code / GitHub** ✅
    - **Activities:**
      - 📥 Installation and configuration of VScode✅.
      - 🔧 GitHub repository setup.
