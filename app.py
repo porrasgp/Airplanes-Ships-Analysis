@@ -83,5 +83,5 @@ if __name__ == "__main__":
 
     # Write metrics to file
     with open('metrics.txt', 'w') as outfile:
-        outfile.write(F'\nZero-Knowledge Proof = {accuracy * 100:.2f}%')
+        outfile.write(F'\nModel Results = {accuracy * 100:.2f}%')
     
