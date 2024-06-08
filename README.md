@@ -1,94 +1,193 @@
-# 🌱 Automated Eco-Label Powered by Satellite Data and Blockchain Technology
+# Image Classification with SVM on AWS S3 Data
 
-## 🗺️ Project Machine Learning Roadmap
+## Overview
 
-### 🎯 Objective
-Develop a machine learning model using GitHub and S3 databases, ensuring efficient CI/CD practices, and incorporating cryptographic proofs and ecological label parameters.
+This project involves processing image data from an AWS S3 bucket and training a Support Vector Machine (SVM) classifier to distinguish between images of airplanes and ships. The code uses several libraries for data handling, processing, and machine learning.
 
-### 🛠️ Phase 1: Initial Setup (Weeks 1-2)
+## Requirements
 
-1. **🔧 Define Tools: VS Code / GitHub** ✅
-   - **Activities:**
-     - 📥 Installation and configuration of VScode✅.
-     - 🔧 GitHub repository setup.
-     - 🔗 Integration of VScode with GitHub✅.
-   - **Responsible:** Giovanni
-   - **Deadline:** Week 1
+- Python 3.6 or later
+- AWS S3 bucket containing the image data
+- An `.env` file with the necessary AWS credentials and region information
 
-2. **⚙️ CI/CD Configuration**
-   - **Activities:**
-     - 🔄 Setup CI/CD workflows using GitHub Actions ✅..
-     - 🧪 Automated tests and deployment processes.
-   - **Responsible:** Giovanni
-   - **Deadline:** Week 2
+## Dependencies
 
-### 📦 Phase 2: Database Preparation and Connection (Weeks 3-4)
+Install the required dependencies using `pip`:
 
-3. **💾 S3 Database Configuration for Training and Hosting**
-   - **Activities:**
-     - 🗂️ Setup S3 buckets to store training data and trained models✅..
-     - 🔐 Establish access permissions and data management policies✅..
-   - **Responsible:** Giovanni
-   - **Deadline:** Week 3
+```bash
+pip install boto3 python-dotenv numpy numba scikit-learn
+Environment Variables
+Create a .env file in the project root directory with the following content:
 
-4. **🔌 Jupyter Notebook Connection with S3**
-   - **Activities:**
-     - 🛠️ Configure VSCode/Github to read and write to S3✅.
-     - 🧪 Data transfer tests between S3 and VS Code✅.
-   - **Responsible:** Giovanni
-   - **Deadline:** Week 4
 
-5. **📊 Dataframe for Ecological Label Parameters**
-   - **Activities:**
-     - 📋 Define key parameters of ecological labels relevant to the project.
-     - 🏗️ Structuring and populating the dataframe.
-   - **Responsible:** Fabian
-   - **Deadline:** Week 2
+Copiar código
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+AWS_REGION=your_aws_region
+Project Structure
+bash
+Copiar código
+.
+├── main.py          # Main script for processing images and training the SVM
+├── requirements.txt # List of dependencies
+└── README.md        # This README file
+Script Details
+main.py
+The main script performs the following tasks:
 
-### 🧩 Phase 3: Algorithm Development and Cryptographic Proof (Weeks 5-7)
+AWS Setup:
 
-6. **🧠 Machine Learning Algorithms**
-   - **Activities:**
-     - 📚 Research and selection of suitable ML algorithms.
-     - 💻 Implementation and testing of algorithms in VS Code/Github.
-   - **Responsible:** Sebastián
-   - **Deadline:** Weeks 5-6
+Loads AWS credentials and region from the .env file.
+Sets up the S3 client using boto3.
+Data Processing:
 
-7. **🔒 Cryptographic Proof (Zero-Knowledge Proof)**
-   - **Activities:**
-     - 🔑 Implementation of Zero-Knowledge Proof for data verification.
-     - 🛡️ Ensure privacy and security of data during model training and deployment.
-   - **Responsible:** Angel
-   - **Deadline:** Week 7
+Defines the process_image_data_parallel_optimized function to process image data in parallel using numba for optimization.
+Fetches image data from specified S3 bucket prefixes.
+Processes each image, trims or pads the data to a fixed length, and labels it based on its category (airplane or ship).
+Model Training and Evaluation:
 
-### 📈 Phase 4: Model Preparation and Training (Weeks 8-10)
+Splits the processed data into training and testing sets.
+Trains an SVM classifier with a linear kernel.
+Evaluates the classifier and prints the accuracy.
+Usage
+Ensure you have the required AWS S3 bucket and image data structured as follows:
+arduino
+Copiar código
+s3://computervisionairplaneandships/
+    ├── airplanes/
+    │   └── planesnet/
+    │       └── planesnetX.jpg
+    └── ships/
+        └── shipsnet/
+            └── shipsnetY.jpg
+Create a .env file with your AWS credentials and region.
 
-8. **📐 Definition of Image-Based Polygons for Model Training**
-   - **Activities:**
-     - 📷 Collection and annotation of images with polygonal shapes.
-     - 🗃️ Preparation of datasets for model training.
-   - **Responsible:** Sebastián, assisted by Angel
-   - **Deadline:** Weeks 8-9
+Run the main.py script:
 
-### ✅ Phase 5: Final Integration and Validation (Weeks 11-12)
+bash
+Copiar código
+python main.py
+Example Output
+The script will print the length of processed image data after trimming and padding, and finally, the accuracy of the classifier:
 
-9. **🧪 Integration and Final Testing**
-   - **Activities:**
-     - 🔗 Integration of all developed components.
-     - 🧪 Comprehensive testing of the model and CI/CD workflow.
-     - 🛠️ Final adjustments and model optimization.
-   - **Responsible:** All team members
-   - **Deadline:** Weeks 11-12
+yaml
+Copiar código
+Result length for image airplanes/planesnet/planesnetX.jpg after adjustment: 1000
+Result length for image ships/shipsnet/shipsnetY.jpg after adjustment: 1000
+Classifier accuracy: 85.00%
+Notes
+Adjust max_sequence_length based on the specifics of your image data and processing requirements.
+Ensure that your AWS credentials have sufficient permissions to access the specified S3 bucket and objects.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### 📅 Key Deliverables and Dates
-- **🗓️ Week 2:** Initial setup of tools and complete CI/CD.
-- **🗓️ Week 2:** Image datasets and ecological label dataframe prepared.
-- **🗓️ Week 4:** S3 databases configured and connected with Jupyter Notebook.
-- **🗓️ Week 7:** ML algorithms implemented and cryptographic tests conducted.
-- **🗓️ Week 12:** Fully integrated and validated model, ready for deployment.
+Acknowledgements
+NumPy
+Numba
+scikit-learn
+boto3
+javascript
+Copiar código
 
-### 🧑‍🤝‍🧑 Key Responsibilities
-- **🔒 Angel:** Cryptographic tests, assistance in image annotation.
-- **⚙️ Giovanni:** Database and CI/CD setup, tools integration ✅.
-- **🧠 Sebastián:** Algorithm selection and implementation, training data preparation.
-- **📊 Fabian:** Ecological label parameters.
+This README provides a comprehensive overview of your project, guiding users through the setup, usage, and structure of the code. Make sure to replace placeholder texts such as `your_access_key_id`, `your_secret_access_key`, and `your_aws_region` with actual instructions or examples where applicable.
+
+
+
+make a project for explaining the code and all actions need to perform for MD using emoticos
+ChatGPT
+Sure, here's a detailed and engaging README.md for your project, complete with emojis to make it more user-friendly and visually appealing:
+
+# 📷 Image Classification with SVM on AWS S3 Data
+
+## Overview
+
+Welcome to the Image Classification Project! This project leverages AWS S3 for data storage and a Support Vector Machine (SVM) to classify images of airplanes and ships. 🚀🛳️
+
+## Requirements
+
+- 🐍 Python 3.6 or later
+- ☁️ AWS S3 bucket containing the image data
+- 🔑 An `.env` file with AWS credentials and region information
+
+## Dependencies
+
+First, make sure to install the necessary Python libraries using `pip`:
+
+```bash
+pip install boto3 python-dotenv numpy numba scikit-learn
+Environment Variables
+Create a .env file in the project root directory with the following content:
+
+makefile
+Copiar código
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+AWS_REGION=your_aws_region
+Replace your_access_key_id, your_secret_access_key, and your_aws_region with your actual AWS credentials and region.
+
+Project Structure
+.
+├── main.py          # 🎯 Main script for processing images and training the SVM
+├── requirements.txt # 📋 List of dependencies
+└── README.md        # 📘 This README file
+
+Script Details
+main.py
+The main script performs the following tasks:
+
+AWS Setup:
+
+Loads AWS credentials and region from the .env file. 🌍
+Sets up the S3 client using boto3. 🔧
+Data Processing:
+
+Defines the process_image_data_parallel_optimized function to process image data in parallel using numba for optimization. ⚡
+Fetches image data from specified S3 bucket prefixes. 📥
+Processes each image, trims or pads the data to a fixed length, and labels it based on its category (airplane or ship). 🛠️
+Model Training and Evaluation:
+
+Splits the processed data into training and testing sets. 🔀
+Trains an SVM classifier with a linear kernel. 🧠
+Evaluates the classifier and prints the accuracy. 📈
+Usage
+Ensure you have the required AWS S3 bucket and image data structured as follows:
+arduino
+Copiar código
+s3://computervisionairplaneandships/
+    ├── airplanes/
+    │   └── planesnet/
+    │       └── planesnetX.jpg
+    └── ships/
+        └── shipsnet/
+            └── shipsnetY.jpg
+Create a .env file with your AWS credentials and region.
+
+Run the main.py script:
+
+python main.py
+Example Output
+The script will print the length of processed image data after trimming and padding, and finally, the accuracy of the classifier:
+
+yaml
+Copiar código
+Result length for image airplanes/planesnet/planesnetX.jpg after adjustment: 1000
+Result length for image ships/shipsnet/shipsnetY.jpg after adjustment: 1000
+Classifier accuracy: 85.00%
+Notes
+🔧 Adjust max_sequence_length based on the specifics of your image data and processing requirements.
+🔐 Ensure that your AWS credentials have sufficient permissions to access the specified S3 bucket and objects.
+License
+This project is licensed under the MIT License - see the LICENSE file for details. 📜
+
+Acknowledgements
+NumPy 🧮
+Numba 🚀
+scikit-learn 🧠
+boto3 ☁️
+Happy Coding! 😊
+
+.
+
+
+
+
