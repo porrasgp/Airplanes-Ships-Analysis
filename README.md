@@ -1,7 +1,3 @@
-Sure, here's a detailed README.md for your project:
-
-markdown
-Copiar código
 # Image Classification with SVM on AWS S3 Data
 
 ## Overview
@@ -23,7 +19,7 @@ pip install boto3 python-dotenv numpy numba scikit-learn
 Environment Variables
 Create a .env file in the project root directory with the following content:
 
-makefile
+
 Copiar código
 AWS_ACCESS_KEY_ID=your_access_key_id
 AWS_SECRET_ACCESS_KEY=your_secret_access_key
@@ -101,8 +97,6 @@ make a project for explaining the code and all actions need to perform for MD us
 ChatGPT
 Sure, here's a detailed and engaging README.md for your project, complete with emojis to make it more user-friendly and visually appealing:
 
-markdown
-Copiar código
 # 📷 Image Classification with SVM on AWS S3 Data
 
 ## Overview
@@ -132,12 +126,11 @@ AWS_REGION=your_aws_region
 Replace your_access_key_id, your_secret_access_key, and your_aws_region with your actual AWS credentials and region.
 
 Project Structure
-bash
-Copiar código
 .
 ├── main.py          # 🎯 Main script for processing images and training the SVM
 ├── requirements.txt # 📋 List of dependencies
 └── README.md        # 📘 This README file
+
 Script Details
 main.py
 The main script performs the following tasks:
@@ -171,8 +164,6 @@ Create a .env file with your AWS credentials and region.
 
 Run the main.py script:
 
-bash
-Copiar código
 python main.py
 Example Output
 The script will print the length of processed image data after trimming and padding, and finally, the accuracy of the classifier:
@@ -195,10 +186,7 @@ scikit-learn 🧠
 boto3 ☁️
 Happy Coding! 😊
 
-css
-Copiar código
-
-This README provides a clear, structured, and engaging explanation of your project. It uses emojis to make it more visually appealing and to help highlight key sections and actions. Feel free to modify and expand it according to your project's specifics.
+.
 
 
 
